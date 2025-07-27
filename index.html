@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     div{
+        width: 400px;
+        height: 500px;
+        background-color: rgb(87, 128, 164);
+        color: white;
+        position: absolute;
+        margin-top: 5vh;
+        margin-left: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border: solid orange 15px;
+        border-radius: 20px;
+
+    }
+    h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    
+    
+    }
+ h1:hover{
+        color: purple;
+        cursor:default;
+        font-size: 50px;
+        text-shadow: purple  5px;
+ }
+</style>
+<body>
+    <h1>THIS IS YOUR CLCULATOR</h1>
+   <div>
+    
+    <label for="" style="font-size: x-large;">Number 1</label>
+     <input type="number" placeholder="Put on me Number" id="num1" style="width: 300px; height: 30px;">
+    <br>
+    <label style="font-size: x-large;">Number 2</label>
+    <input type="number" placeholder="Put on me Number" id="num2" style="width: 300px; height: 30px;">
+    <br>
+    <button id="btn" onclick="add()" style="font-size: 19px; font-weight: bold;">Add</button>
+    <button id="btn" onclick="subtraction()" style="font-size: 19px; font-weight: bold;">Subtract</button>
+    <button id="btn" onclick="multiplication()" style="font-size: 19px; font-weight: bold;">Multiply</button>
+    <button id="btn" onclick="division()" style="font-size: 19px; font-weight: bold;" >Division</button>
+    <h3 id="result"></h3>
+
+   </div>
+    <script>
+        // selecting text boxes
+        var val1 =document.getElementById("num1")
+        var val2 =document.getElementById("num2")
+        var result=document.getElementById("result")
+
+        function add()
+        {
+            var ans =Number(num1.value)+Number(num2.value)
+            console.log(ans)
+
+            result.textContent="Result is :"+ans
+        }
+               function subtraction()
+        {
+            var ans =Number(num1.value)-Number(num2.value)
+            console.log(ans)
+
+            result.textContent="Result is :"+ans
+        }
+               function multiplication()
+        {
+            var ans =Number(num1.value)*Number(num2.value)
+            console.log(ans)
+
+            result.textContent="Result is :"+ans
+        }
+               function division()
+        {
+            var ans =Number(num1.value)/Number(num2.value)
+            console.log(ans)
+
+            result.textContent="Result is :"+ans
+        }
+    </script>
+</body>
+</html>
